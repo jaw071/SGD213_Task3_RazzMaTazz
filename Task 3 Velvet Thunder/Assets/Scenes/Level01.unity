@@ -517,6 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db41ccb92ebff0a439ac479232c31e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalPlayerAcceleration: 400
+  jumpForce: 5
 --- !u!114 &827413601
 MonoBehaviour:
   m_ObjectHideFlags: 0
