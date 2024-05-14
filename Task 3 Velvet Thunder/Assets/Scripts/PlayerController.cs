@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         // read the horizontal input axis
         float horizontalInput = Input.GetAxis("Horizontal");
+
         // if movement input is not zero
         if (horizontalInput != 0.0f)
         {
@@ -32,6 +33,12 @@ public class PlayerController : MonoBehaviour
                 // pass our movement input to our MovementComponent
                 movementComponent.MovePlayer(horizontalInput * Vector2.right);
             }
+        }
+
+        //handle jump input
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            
         }
     }
 }

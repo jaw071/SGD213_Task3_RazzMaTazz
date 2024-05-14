@@ -8,7 +8,9 @@ using UnityEngine;
 
 public class MovementComponent : MonoBehaviour
 {
-    [SerializeField] private float horizontalPlayerAcceleration = 5000f;
+    [SerializeField] private float horizontalPlayerAcceleration = 400f;
+    [SerializeField] public float jumpForce = 5f;
+
     // local references
     private Rigidbody2D ourRigidbody;
 
@@ -46,6 +48,11 @@ public class MovementComponent : MonoBehaviour
             // apply forceToAdd to ourRigidbody
             ourRigidbody.AddForce(forceToAdd);
         }
+    }
+
+    public void Jump()
+    {
+
     }
 }
 
