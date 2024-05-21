@@ -52,7 +52,8 @@ public class MovementComponent : MonoBehaviour
 
     public void Jump()
     {
-
+        ourRigidbody.velocity = Vector2.zero;
+        ourRigidbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
 }
 

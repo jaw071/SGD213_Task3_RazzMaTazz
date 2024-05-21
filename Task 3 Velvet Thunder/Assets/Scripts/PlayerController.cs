@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         //handle jump input
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+            movementComponent.Jump();
         }
     }
 }
