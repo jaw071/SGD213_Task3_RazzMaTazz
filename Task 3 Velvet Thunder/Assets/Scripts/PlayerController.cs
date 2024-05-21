@@ -37,13 +37,13 @@ public class PlayerController : MonoBehaviour
         }
 
         //handle jump input
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (Input.GetKeyDown(KeyCode.Space) && grounded) // only if player is grounded, it passes through the jump function and grounded to false
         {
             movementComponent.Jump();
             grounded = false;
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) // sets the grounded variable to true if the player is on an object with the Ground tag
     {
         if (collision.gameObject.tag == "Ground")
         {

@@ -50,9 +50,10 @@ public class MovementComponent : MonoBehaviour
         }
     }
 
-    public void Jump()
+    public void Jump() //handles jumping physics
     {
-        ourRigidbody.velocity = Vector2.zero;
+        //ourRigidbody.velocity = Vector2.zero; //this forces the players velocity to stop before the jump
+        //ourRigidbody.velocity = new Vector2(ourRigidbody.velocity.x, jumpForce); // another option for jumping (i dont see any difference)
         ourRigidbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
 }
