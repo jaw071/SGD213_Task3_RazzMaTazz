@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     // local references to other scripts
     private MovementComponent movementComponent;
+    private bool grounded;
 
 
     // Start is called before the first frame update
@@ -36,9 +37,17 @@ public class PlayerController : MonoBehaviour
         }
 
         //handle jump input
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             movementComponent.Jump();
+            grounded = false;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            grounded = true;
         }
     }
 }
