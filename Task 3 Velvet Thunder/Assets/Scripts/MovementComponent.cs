@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class MovementComponent : MonoBehaviour
 {
-    [SerializeField] private float horizontalPlayerAcceleration = 400f;
+    [SerializeField] public float horizontalPlayerAcceleration = 400f;
     [SerializeField] public float jumpForce = 5f;
 
     // local references

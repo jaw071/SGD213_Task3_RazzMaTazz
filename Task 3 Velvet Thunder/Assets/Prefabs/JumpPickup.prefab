@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPickup: {fileID: 216758773985135316}
-  speedPickup: {fileID: 216758773985135316, guid: 9db0f18e141e2874c8360e7821acf456, type: 3}
+  speedPickup: {fileID: 0}
 --- !u!61 &-7579757484686893511
 BoxCollider2D:
   m_ObjectHideFlags: 0

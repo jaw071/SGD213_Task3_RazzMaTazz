@@ -6,7 +6,7 @@ public class HandlePickup : MonoBehaviour, IBaseCollision
 {
     public GameObject jumpPickup;
     public GameObject speedPickup;
-    
+        
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
@@ -31,15 +31,18 @@ public class HandlePickup : MonoBehaviour, IBaseCollision
         PlayerController playerController = player.GetComponent<PlayerController>();
         MovementComponent movementComponent = player.GetComponent<MovementComponent>();
 
-        if (jumpPickup && !speedPickup)
+        if (jumpPickup)
         {
             //insert double jump coding
             Debug.Log("Jump Pickup got");
+            movementComponent.jumpForce = 10f;
+           
         }
         if (speedPickup)
         {
             //insert double speed coding
-            Debug.Log("Speed Pickup got");
+            Debug.Log("Speed Pickup got");            
+            movementComponent.horizontalPlayerAcceleration = 1200f;
         }
               
         Destroy(gameObject);
