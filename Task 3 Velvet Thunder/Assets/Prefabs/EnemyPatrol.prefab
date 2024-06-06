@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1995693283003874573, guid: f9232ebd00c183943b5df4d80feb0559, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7123699
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995693283003874573, guid: f9232ebd00c183943b5df4d80feb0559, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6598337462420368309, guid: f9232ebd00c183943b5df4d80feb0559, type: 3}
       propertyPath: m_Name
       value: EnemyPatrol
@@ -59,6 +67,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6598337462420368309, guid: f9232ebd00c183943b5df4d80feb0559, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3465825845562039417}
+    - targetCorrespondingSourceObject: {fileID: 6598337462420368309, guid: f9232ebd00c183943b5df4d80feb0559, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8605529866257810408}
   m_SourcePrefab: {fileID: 100100000, guid: f9232ebd00c183943b5df4d80feb0559, type: 3}
 --- !u!1 &992432994381195757 stripped
 GameObject:
@@ -79,3 +90,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalPlayerAcceleration: 400
   jumpForce: 5
+--- !u!114 &-8605529866257810408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992432994381195757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b028bb1e8128a1345b5d5d03cd959610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
