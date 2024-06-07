@@ -7,11 +7,11 @@ using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(MovementComponent))]
 
-public class AiPatrol : MonoBehaviour, IBaseCollision
+public class AiPatrol : MonoBehaviour
 {
     
     private MovementComponent movementComponent;
-    //direction to node from gameObjet position
+    //direction to node from gameObject position
     private Vector3 direction;
     //current node to move to
     private int index;
@@ -45,13 +45,7 @@ public class AiPatrol : MonoBehaviour, IBaseCollision
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Patrol")
-        {
-            index = (index + 1) % patrolPoints.Length;
-        }
-    }
+    
 }
     
     
