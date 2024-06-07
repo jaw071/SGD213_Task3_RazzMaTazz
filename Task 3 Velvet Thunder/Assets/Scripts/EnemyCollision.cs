@@ -28,7 +28,7 @@ public class EnemyCollision  : MonoBehaviour, IBaseCollision
     public void HandleCollision(GameObject player)
     {
         PlayerController playerController = player.GetComponent<PlayerController>();
-        //playerController.die()
+        playerController.die();
         Debug.Log("Player die");
     }
 }

@@ -11,12 +11,19 @@ public class PlayerController : MonoBehaviour
     // local references to other scripts
     private MovementComponent movementComponent;
     private bool grounded;
+    private Vector3 startingPosition;
+    private float startingAcceleration;
+    private float startingJump;
 
 
     // Start is called before the first frame update
     void Start()
     {
         movementComponent = GetComponent<MovementComponent>();
+        //get spawn location and default speed and jump values.
+        startingPosition = transform.position;
+        startingAcceleration = movementComponent.horizontalPlayerAcceleration;
+        startingJump = movementComponent.jumpForce;
     }
 
     // Update is called once per frame
@@ -49,5 +56,12 @@ public class PlayerController : MonoBehaviour
         {
             grounded = true;
         }
+    }
+    //upon death reset player location to starting position and reset speed and jump     
+    public void die(){
+        transform.position = startingPosition;
+        movementComponent.horizontalPlayerAcceleration = startingAcceleration;
+        movementComponent.jumpForce = startingJump;
+    
     }
 }
