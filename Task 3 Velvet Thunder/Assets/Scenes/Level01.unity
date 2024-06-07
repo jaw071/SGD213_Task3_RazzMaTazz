@@ -599,7 +599,7 @@ PrefabInstance:
     - target: {fileID: -8605529866257810408, guid: 302e89ce086b93391828cb8e5ca28516, type: 3}
       propertyPath: patrolPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1464027176}
     - target: {fileID: 992432994381195757, guid: 302e89ce086b93391828cb8e5ca28516, type: 3}
       propertyPath: m_Name
       value: EnemyPatrol
@@ -669,6 +669,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 302e89ce086b93391828cb8e5ca28516, type: 3}
+--- !u!1 &1464027176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2995559306519256214, guid: a5051f488dcd3f744a03007e775d9623, type: 3}
+  m_PrefabInstance: {fileID: 2100217996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1464319765
 PrefabInstance:
   m_ObjectHideFlags: 0
