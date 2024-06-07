@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class MovementComponent : MonoBehaviour
 {
+    // initialises variables
     [SerializeField] public float horizontalPlayerAcceleration = 400f;
     [SerializeField] public float jumpForce = 5f;
 
@@ -29,8 +30,9 @@ public class MovementComponent : MonoBehaviour
 
     public void MovePlayer(float horizontalInput)
     {
-        // a horizontalInput of 0 has no effect, as we want our ship to drift
-        if (horizontalInput != 0) {
+        // a horizontalInput of 0 has no effect, as we want the player to slow down over time, not stop instantly
+        if (horizontalInput != 0) 
+        {
             //calculate our force to add
             Vector2 forceToAdd = Vector2.right * horizontalInput * horizontalPlayerAcceleration * Time.deltaTime;
             // apply forceToAdd to ourRigidbody
@@ -40,7 +42,6 @@ public class MovementComponent : MonoBehaviour
 
     public void MovePlayer(Vector2 direction)
     {
-        // a horizontalInput of 0 has no effect, as we want our ship to drift
         if (direction.magnitude != 0)
         {
             //calculate our force to add
