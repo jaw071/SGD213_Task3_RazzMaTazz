@@ -28,25 +28,26 @@ public class HandlePickup : MonoBehaviour, IBaseCollision
 
     public void HandleCollision(GameObject player)
     {
-        PlayerController playerController = player.GetComponent<PlayerController>();
         MovementComponent movementComponent = player.GetComponent<MovementComponent>();
 
         if (jumpPickup)
         {
-            //insert double jump coding
+            //increase the jumpforce from the movement component on player
             Debug.Log("Jump Pickup got");
-            movementComponent.jumpForce = 10f;
-           
+            movementComponent.jumpForce = 12f;
+            //deactivate pickup            
+            jumpPickup.SetActive(false);
+
         }
         if (speedPickup)
         {
-            //insert double speed coding
+            //increase horizontalplayeracceleration from the player movement component on player
             Debug.Log("Speed Pickup got");            
             movementComponent.horizontalPlayerAcceleration = 1200f;
+            //deavtivate pickup
+            speedPickup.SetActive(false);
         }
-              
-        Destroy(gameObject);
+        
     }
-    
-
+        
 }
