@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyCollision  : MonoBehaviour, IBaseCollision
 {
 
+    //when object collides with player object, get reference to player and call player.die()
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")

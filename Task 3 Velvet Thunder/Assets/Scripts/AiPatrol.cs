@@ -11,14 +11,15 @@ public class AiPatrol : MonoBehaviour, IBaseCollision
 {
     
     private MovementComponent movementComponent;
-    private Vector3 target;
+    //direction to node from gameObjet position
     private Vector3 direction;
+    //current node to move to
     private int index;
+    // array of patrol nodes
     public GameObject[] patrolPoints;
 
     private void Start()
     {
-        BoxCollider2D boxCollider2D = GetComponent<BoxCollider2D>();
         movementComponent = GetComponent<MovementComponent>();
         index = 0;
 
@@ -28,16 +29,18 @@ public class AiPatrol : MonoBehaviour, IBaseCollision
 
     void Update()
     {
+        //get direction of current node based of position of gameObject
         direction = (patrolPoints[index].transform.position - transform.position).normalized;
+        //move player toward direction using movement component
         movementComponent.MovePlayer(direction);
         
     }
 
+    //when gameobject collides with node, change current node to next in array, going back to start of array when reaching the end.
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Patrol")
         {
-            Debug.Log(index);
             index = (index + 1) % patrolPoints.Length;
         }
     }
