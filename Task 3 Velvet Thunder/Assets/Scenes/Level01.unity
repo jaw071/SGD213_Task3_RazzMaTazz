@@ -430,7 +430,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: f7db6fa2c267f4b4a8602d59d1ee9381, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.4245283, b: 0.009924072, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -449,8 +449,8 @@ Transform:
   m_GameObject: {fileID: 679886171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.0122, y: -1.85, z: 0.036899365}
-  m_LocalScale: {x: 20.939981, y: 1, z: 1}
+  m_LocalPosition: {x: 16.4626, y: -4.6925, z: 0.036899365}
+  m_LocalScale: {x: 47.49335, y: 6.684838, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -546,7 +546,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db41ccb92ebff0a439ac479232c31e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalPlayerAcceleration: 400
-  jumpForce: 5
+  horizontalPlayerAcceleration: 500
+  jumpForce: 9
 --- !u!114 &827413601
 MonoBehaviour:
   m_ObjectHideFlags: 0
